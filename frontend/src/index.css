@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.08);
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --bg-tertiary: #f3f4f6;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-input {
+  @apply w-full px-4 py-2.5 border rounded-xl outline-none transition-all;
+  border-color: var(--border-color);
+}
+
+.glass-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-white transition-all;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #root > * {
+    visibility: visible;
+  }
+  #root > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
