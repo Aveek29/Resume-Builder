@@ -70,6 +70,49 @@ This zip was the starting point for reverse-engineering the TypeScript source. T
 - **Backend:** Node.js, Express, MongoDB (Mongoose), JWT, Groq SDK
 - **Deploy:** AWS Elastic Beanstalk (see Procfile)
 
+## PDF Export Guide
+
+For the best-looking, ATS-friendly resume PDF, use the following print settings:
+
+| Setting | Recommended Value |
+|---|---|
+| Destination | Save as PDF / Microsoft Print to PDF |
+| Paper Size | A4 |
+| Layout | Portrait |
+| Pages | All |
+| Color | Color |
+| Margins | Minimum |
+| Scale | 90–100% |
+| Pages per Sheet | 1 |
+| Headers & Footers | Disabled |
+| Background Graphics | Enabled |
+
+**Best Results**
+- Fits the resume on a single page
+- Preserves sidebar colors and styling
+- Maintains professional spacing
+- ATS-friendly PDF output
+
+**Troubleshooting**
+
+| Issue | Fix |
+|---|---|
+| Resume appears too small | Increase Scale to 100%, ensure Paper Size is A4 |
+| Content overflows to a second page | Reduce Scale to 90–95%, check Margins are set to Minimum |
+| Sidebar colors are missing | Enable "Background Graphics" in the print dialog |
+
+**Recommended Configuration**
+```
+Paper Size      : A4
+Layout          : Portrait
+Margins         : Minimum
+Scale           : 90%
+Pages per Sheet : 1
+Color           : Color
+```
+
+This configuration typically produces the clean one-page layout shown in the preview and maximizes usable page space while maintaining readability.
+
 ## Environment Variables
 
 | Variable       | Description              |
